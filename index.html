@@ -1,462 +1,1133 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
-<meta charset="UTF-8">
-<title>Home | Hanbit OH</title>
-<link rel="shortcut icon" href="favicon/favicon_16x16.ico">
-<meta name="description" content="Hanbit OH Personal website - Robotics researcher specializing in manipulation and machine learning">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://hanbit-o.github.io/" />
-<meta property="og:image" content="SNSで表示させたい画像のパス" />
-<meta property="og:title" content="Hanbit OH Personal website" />
-<meta property="og:description" content="Hanbit OH, Homepage" />
-<meta name="keywords" content="Hanbit OH, Hanbit, OH, robotics, AI, machine learning">
-<meta property="fb:app_id" content="facebookのApp ID" />
-<meta property="article:publisher" content="FacebookページのURL">
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
 
-<link rel="stylesheet" href="static/css/bootstrap.min.css">
-<link rel="stylesheet" href="static/css/index.css">
-<link rel="stylesheet" href="static/css/icon.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">    
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RVFZ9VYXRM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-RVFZ9VYXRM');
-</script>
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Robust Instant Policy:
+  Student’s-t-Based Trajectory Aggregation for Reliable In-Context Imitation Learning in Robot Manipulation
+  </title>
+
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
 </head>
-<body id="page-top">
+<body>
 
-<!--<main>-->
-    
-<section id="name">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8">
-                <h1><strong>Hanbit OH</strong></h1>
-                <h2 class="h4 text-muted mb-3">오 한빛</h2>
-                <p class="lead mb-4">Researcher, Ph.D. in Engineering, Japan.</p>            
-                <p class="mb-4">
-                    I am a research scientist@<a href="https://www.aist.go.jp/index_en.html">AIST</a>(国立研究開発法人産業技術総合研究所) in Odaiba, Tokyo, Japan.                 
-                    My research topic is robotics, manipulation and machine learning (AI robotics). 
-                </p>
-                
-                <div class="mb-4">
-                    <ul class="follow-me">
-                        <li><a href="https://www.linkedin.com/in/hanbit-oh/" aria-label="LinkedIn"></a></li>
-                        <li><a href="https://www.youtube.com/@HanbitOh" aria-label="YouTube"></a></li>
-                        <li><a href="https://github.com/hanbit-o" aria-label="GitHub"></a></li>
-                    </ul>
-                </div>
-                
-                <div class="contact-links">
-                    <a href="mailto:oh.hanbit.oe9@aist.go.jp" class="btn btn-primary btn-sm me-2">Email</a>
-                    <a href="https://scholar.google.com/citations?user=IukFCV8AAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm me-2">Google Scholar</a>
-                    <a href="https://researchmap.jp/hanbit-o" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm me-2">Research Map</a>
-                    <a href="https://orcid.org/my-orcid?orcid=0000-0003-3339-6147" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm">ORCiD</a>
-                </div>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              Robust Instant Policy:<br>
+              <span class="title-suffix">Student’s-t-Based Trajectory Aggregation for Reliable In-Context Imitation Learning in Robot Manipulation</span>
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                Anonymous</span>
+              <!-- <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <span class="author-block">
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <span class="author-block">
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                  </span> -->
+                  </div>
+
+                  <!-- <div class="is-size-5 publication-authors">
+                    <span class="author-block">Institution Name<br>Conferance name and year</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                  </div> -->
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <!-- <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span> -->
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code: Coming Soon</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv: Coming Soon</span>
+                </a>
+              </span>
             </div>
-            <div class="col-lg-4 text-center">
-                <img src="static/img/oh.jpg" alt="Hanbit OH" class="img-fluid rounded-circle shadow-lg" style="max-width: 250px;">
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-</section>
-
-<section id="sec_research">
-    <div class="container">
-        <h2>Research</h2>
-
-        <div class="research-grid">
-            <!-- Tile 1 -->
-            <div class="research-tile">
-                <div class="research-tile-media">
-                    <video src="research/static/sart/video/Video_v2_compressed_2025-09-09.mp4" controls muted>
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="research-tile-content">
-                    <h4>SART: Safe Self-augmented Robot Trajectory</h4>
-                    <p>Oh et al., Efficient Imitation Learning via Safe Self-augmentation with Demonstrator-annotated Precision, Under review, 2025.</p>
-                    <div class="research-tile-buttons">
-                        <a href="https://sites.google.com/view/sart-il" class="btn btn-success btn-sm">Project</a>
-                        <a href="https://arxiv.org/abs/2509.09893" target="_blank" rel="noopener" class="btn btn-info btn-sm">Preprint</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tile 2 -->
-            <div class="research-tile">
-                <div class="research-tile-media">
-                    <video src="research/static/dpiil/iros2024_oh_video_compressed_2023-09-27.mp4" controls muted>
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="research-tile-content">
-                    <h4>DPIIL: Demonstrator-Perceived Precision IIL</h4>
-                    <p>Oh et al., Leveraging Demonstrator-Perceived Precision for Safe Interactive Imitation Learning of Clearance-Limited Tasks, IEEE Robotics and Automation Letters, 2024.</p>
-                    <div class="research-tile-buttons">
-                        <a href="https://sites.google.com/view/dpiil" target="_blank" rel="noopener" class="btn btn-success btn-sm">Project</a>
-                        <a href="https://doi.org/10.1109/LRA.2024.3366755" target="_blank" rel="noopener" class="btn btn-info btn-sm">Paper</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tile 3 -->
-            <div class="research-tile">
-                <div class="research-tile-media">
-                    <video src="research/static/rip/Iros2025-video_compressed_2025-02-27_compressed_2025-02-27.mp4" controls muted>
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="research-tile-content">
-                    <h4>RIP: Robust Instant Policy</h4>
-                    <p>Oh et al., Leveraging Student's t-Regression Model for Robust In-context Imitation Learning of Robot Manipulation, IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2025.</p>
-                    <div class="research-tile-buttons">
-                        <a href="https://sites.google.com/view/robustinstantpolicy" target="_blank" rel="noopener" class="btn btn-success btn-sm">Project</a>
-                        <a href="https://arxiv.org/abs/2506.15157" target="_blank" rel="noopener" class="btn btn-info btn-sm">Paper</a>
-                    </div>
-                </div>
-            </div>
-           
-            <!-- Tile 4 -->
-            
-            <div class="research-tile">
-                <div class="research-tile-media">
-                    <img src="research/static/ispil/overview.png" alt="ISPIL Overview" class="img-fluid">
-                </div>
-                <div class="research-tile-content">
-                    <h4>ISPIL: Interactive Sub-Goal Planning IL</h4>
-                    <p>Ochoa* and Oh* et al., Interactive Sub-Goal-Planning Imitation Learning for Long-Horizon Tasks With Diverse Goals, IEEE Access, 2024. *: Equal contribution.</p>
-                    <div class="research-tile-buttons">
-                        <a href="https://doi.org/10.1109/ACCESS.2024.3521302" target="_blank" rel="noopener" class="btn btn-info btn-sm">Paper</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tile 5 -->
-            <!-- <div class="research-tile">
-                <div class="research-tile-media">
-                    <video src="static/video/IROS23_nagato.mp4" controls muted>
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="research-tile-content">
-                    <h4>Slide-Support</h4>
-                    <p>Nagato et al., "Probabilistic Slide-support Manipulation Planning in Clutter," in IROS, 2023. (Accepted)</p>
-                    <div class="research-tile-buttons">
-                        <a href='research/slide-support-manipulation.html' class="btn btn-success btn-sm">Project</a>
-                        <a href="https://arxiv.org/abs/2306.12649" target="_blank" rel="noopener" class="btn btn-info btn-sm">Paper</a>
-                        <a href="https://youtu.be/Qyes4hjCP3w" target="_blank" rel="noopener" class="btn btn-warning btn-sm">YouTube</a>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- Tile 6 -->
-            <!-- <div class="research-tile">
-                <div class="research-tile-media">
-                    <video src="static/video/ACCESS24.mp4" controls muted>
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="research-tile-content">
-                    <h4>Scene Analysis Based on Support Relations</h4>
-                    <p>Motoda et al., "Multi-step Object Extraction Planning from Clutter based on Support Relations," IEEE Access, 2023.</p>
-                    <div class="research-tile-buttons">
-                        <a href="https://ieeexplore.ieee.org/document/10117592" target="_blank" rel="noopener" class="btn btn-success btn-sm">Paper</a>
-                        <a href="https://youtu.be/NoVPAZl19sI" target="_blank" rel="noopener" class="btn btn-warning btn-sm">YouTube</a>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- Tile 7 -->
-            <!-- <div class="research-tile">
-                <div class="research-tile-media">
-                    <video src="static/video/SICE-SI21.mp4" controls muted>
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="research-tile-content">
-                    <h4>Shelf Replenishment</h4>
-                    <p>Motoda et al., "Shelf Replenishment Based on Object Arrangement Detection and Collapse Prediction for Bimanual Manipulation," MDPI Robotics, 2022.</p>
-                    <div class="research-tile-buttons">
-                        <a href="https://www.mdpi.com/2218-6581/11/5/104" target="_blank" rel="noopener" class="btn btn-success btn-sm">Paper</a>
-                        <a href="https://www.youtube.com/watch?v=HTgmXDSWgPs&source_ve_path=MjM4NTE&feature=emb_title" target="_blank" rel="noopener" class="btn btn-warning btn-sm">YouTube</a>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- Tile 8 -->
-            <!-- <div class="research-tile">
-                <div class="research-tile-media">
-                    <video src="static/video/CASE21_0419_VI_fi.mp4" controls muted>
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="research-tile-content">
-                    <h4>Bimanual Shelf Picking</h4>
-                    <p>Motoda et al., "Bimanual Shelf Picking Planner Based on Collapse Prediction," in IEEE 17th International Conference on Automation Science and Engineering (CASE), 2021.</p>
-                    <div class="research-tile-buttons">
-                        <a href='research/bimanual-shelf-picking.html' class="btn btn-success btn-sm">Project</a>
-                        <a href="https://ieeexplore.ieee.org/document/9551507" target="_blank" rel="noopener" class="btn btn-info btn-sm">Paper</a>
-                        <a href="https://www.youtube.com/watch?v=HTgmXDSWgPs&source_ve_path=MjM4NTE&feature=emb_title" target="_blank" rel="noopener" class="btn btn-warning btn-sm">YouTube</a>
-                    </div>
-                </div>
-            </div>   -->
-
-            <!-- Tile 9 -->
-            <!-- <div class="research-tile">
-                <div class="research-tile-media">
-                    <video src="static/video/SII20.mp4" controls muted>
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="research-tile-content">
-                    <h4>Robot Playing Yama-Kuzushi</h4>
-                    <p>Motoda et al., Probabilistic Action/Observation Planning for Playing Yamakuzushi, IEEE SII2020. Robotic action/observation planning for playing yamakuzushi based on human motion, Transactions of the JSME (in Japanese), 2020.</p>
-                    <div class="research-tile-buttons">
-                        <a href="https://www.jstage.jst.go.jp/article/transjsme/86/892/86_20-00146/_article/-char/ja" target="_blank" rel="noopener" class="btn btn-success btn-sm">Paper</a>
-                    </div>
-                </div>
-            </div> -->
-        </div>
-    </div>
-</section>
-
-<section id="sec2">
-    <div class="container">
-        <h2>Publications</h2>
-
-        <div class="mb-5">
-            <h3>Preprints</h3>
-            <ol class="publications-list">
-                <li>
-                    T. Motoda*, K. Makihara*, R. Nakajo*, <strong>H. Oh*</strong>, K. Shirai, R. Hanai, M. Murooka, Y. Suzuki, H. Nishihara, M. Takeda, and others.<br>
-                    "Recipe for Vision-Language-Action Models in Robotic Manipulation: A Survey,"<br>
-                    <em>Authorea Preprints</em>, Authorea, 2025. *: Equal contribution.
-                    <a href="https://www.techrxiv.org/doi/full/10.36227/techrxiv.175624610.06665789" target="_blank" rel="enoopener" class="btn btn-info btn-sm">Preprint</a>
-                </li>
-                <li>
-                    <strong>H. Oh*</strong>, M. Murooka*, T. Motoda, R. Nakajo, and Y. Domae.<br>
-                    "SART: Efficient Imitation Learning via Safe Self-augmentation with Demonstrator-annotated Precision,"<br>
-                    <em>arXiv preprint</em>, arXiv:2503.13916, 2024. *: Equal contribution.
-                    <a href="https://arxiv.org/abs/2503.13916" target="_blank" rel="noopener" class="btn btn-info btn-sm">Preprint</a>
-                    <a href="https://sites.google.com/view/sart-il" target="_blank" rel="noopener" class="btn btn-success btn-sm">Project</a>
-                </li>
-            </ol>
-
-        </div>
-
-        <div class="mb-5">
-            <h3>Journal Articles</h3>
-            <ol class="publications-list">
-                <li>
-                Cynthia Ochoa *, <strong>Hanbit OH *</strong>, Yuhwan Kwon, Yukiyasu Domae, and Takamitsu Matsubara.<br>
-                "ISPIL: Interactive Sub-Goal-Planning Imitation Learning for Long-Horizon Tasks With Diverse Goals,"<br>
-                <em>IEEE Access</em>, 2024. (Refereed), *: Equal contribution.
-                <a href="https://doi.org/10.1109/ACCESS.2024.3521302" target="_blank" rel="noopener" class="btn btn-info btn-sm">Paper</a>
-                
-                </li>
-                <li>
-                <strong>Hanbit OH</strong> and Takamitsu Matsubara.<br>
-                "Leveraging Demonstrator-Perceived Precision for Safe Interactive Imitation Learning of Clearance-Limited Tasks,"<br>
-                <em>IEEE Robotics and Automation Letters</em>, Vol. 9, no. 4, pp. 3387-3394, 2024. (Refereed)
-                <a href="https://doi.org/10.1109/LRA.2024.3366755" target="_blank" rel="noopener" class="btn btn-info btn-sm">Paper</a>
-                <a href="https://sites.google.com/view/dpiil" target="_blank" rel="noopener" class="btn btn-success btn-sm">Project</a>
-                </li>
-                <li>
-                Hirotaka Tahara, Hikaru Sasaki, <strong>Hanbit OH</strong>, Edgar Anarossi, and Takamitsu Matsubara.<br>
-                "Disturbance Injection Under Partial Automation: Robust Imitation Learning for Long-Horizon Tasks,"<br>
-                <em>IEEE Robotics and Automation Letters</em>, Vol. 8, no. 5, pp. 2377-3774, 2023. (Refereed)
-                <a href="https://doi.org/10.1109/LRA.2023.3260586" target="_blank" rel="noopener" class="btn btn-info btn-sm">Paper</a>
-                </li>
-                <li>
-                <strong>Hanbit OH</strong>, Hikaru Sasaki, Brendan Michael, and Takamitsu Matsubara.<br>
-                "Bayesian Disturbance Injection: Robust imitation learning of flexible policies for robot manipulation,"<br>
-                <em>Neural Networks</em>, Vol. 158, pp. 42-58, 2023. (Refereed)
-                <a href="https://doi.org/10.1016/j.neunet.2022.11.008" target="_blank" rel="noopener" class="btn btn-info btn-sm">Paper</a>
-                </li>
-            </ol>
-        </div>
-
-        <div class="mb-5">
-            <h3>International conferences (peer-reviewed)</h3>
-            <ol class="publications-list">
-                <li>
-                Hirotaka Tahara, Hikaru Sasaki, <strong>Hanbit OH</strong>, Brendan Michael, and Takamitsu Matsubara.<br>
-                "Disturbance-injected Robust Imitation Learning with Task Achievement,"<br>
-                In Proceeding of IEEE International Conference on Robotics and Automation (ICRA), pp. 2466-2472, 2022. (Refereed)
-                <a href="https://doi.org/10.1109/icra46639.2022.9812376" target="_blank" rel="noopener" class="btn btn-info btn-sm">Paper</a>
-                </li>
-                <li>
-                <strong>Hanbit OH</strong>, Hikaru Sasaki, Brendan Michael, and Takamitsu Matsubara.<br>
-                "Bayesian Disturbance Injection: Robust Imitation Learning of Flexible Policies,"<br>
-                In Proceeding of IEEE International Conference on Robotics and Automation (ICRA), pp. 8629-8635, 2021. (Refereed)
-                <a href="https://doi.org/10.1109/icra48506.2021.9561573" target="_blank" rel="noopener" class="btn btn-info btn-sm">Paper</a>
-                </li>
-                <li>
-                <strong>Hanbit OH</strong>, Andrea M. Salcedo-Vázquez, Ixchel G. Ramirez-Alpizar, and Yukiyasu Domae.<br>
-                "Robust Instant Policy: Leveraging Student's t-Regression Model for Robust In-context Imitation Learning of Robot Manipulation,"<br>
-                In Proceeding of IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2025. (Refereed)
-                <a href="https://arxiv.org/abs/2506.15157" target="_blank" rel="noopener" class="btn btn-info btn-sm">Paper</a>
-                <a href="https://sites.google.com/view/robustinstantpolicy" target="_blank" rel="noopener" class="btn btn-success btn-sm">Project</a>
-                </li>
-            </ol>
-        </div>
-
-        <div class="mb-5">
-            <h3>Awards</h3>
-            <ol>
-                <li>
-                    <span class="badge bg-primary">[学内] 黒正賞(sumacumlaude)</span>, 岡山大学, 2019.
-                    黒正賞, This award is presented each year on the day of the graduation ceremony to a new graduate of Okayama University who has shown outstanding academic achievement and a good personality.
-                </li>
-                <li>
-                    <span class="badge bg-info">奨励賞</span>, 2019年度情報処理学会関西支部 支部大会, 2019.
-                </li>
-                <li>
-                    <span class="badge bg-success">最優秀賞</span>, NAIST CICP (Creative and International Competitiveness Project) 2019 work shop, 2020.
-                </li>
-                <li>
-                    <span class="badge bg-success">最優秀講演賞</span>, 第21回 計測自動制御学会システムインテグレーション部門講演会, 2020.
-                </li>
-                <li>
-                    <span class="badge bg-success">Best Oral Presentation Award</span>, NAIST CICP (Creative and International Competitiveness Project) 2020 work shop, 2020.
-                </li>
-                <li>
-                    <span class="badge bg-primary">Young Award (IROS 2024)</span>, IEEE Robotics and Automation Society Japan Joint Chapter, 2024. 
-                    <a href='static/pdf/award-IROS24_IEEEJJY.pdf' target="_blank" rel="noopener" class="btn btn-info btn-sm">pdf</a>, 
-                    <a href="https://www.ieee-jp.org/section/tokyo/chapter/RA-24/RASJPYoungAward_2024.html" target="_blank" rel="noopener" class="btn btn-info btn-sm">link</a>
-                </li>
-            </ol>
-        </div>
-
-        <div class="mb-5">
-            <h3>Dissertation (Doctoral thesis)</h3>
-            <ol>
-                <li>URL: <a href='https://library.naist.jp/opac/book/110449' target='_blank' rel='noopener'>https://library.naist.jp/opac/book/110449</a>
-                </li>
-            </ol>
-        </div>
-
-    </div>
-</section>
-
-<section id="sec3">
-    <div class="container">
-        <h2>Educational Activities</h2>
-
-        <h4>TA</h4>
-        <ol>
-            <li>Apr. 2020 – Sep. 2020, <strong>Teaching Assistant</strong>, Software Engineering, NAIST, Japan.</li>
-            <li>Oct. 2020 – Mar. 2021, <strong>Teaching Assistant</strong>, Operating Systems and Systems Software, NAIST, Japan.</li>
-            <li>Apr. 2021 – Sep. 2021, <strong>Teaching Assistant</strong>, Software Engineering, NAIST, Japan.</li>
-            <li>Oct. 2021 – Mar. 2022, <strong>Teaching Assistant</strong>, Operating Systems and Systems Software, NAIST, Japan.</li>
-            <li>Apr. 2022 – Sep. 2022, <strong>Teaching Assistant</strong>, Software Engineering, NAIST, Japan.</li>
-        </ol>
-
-        <h4>Tutor</h4>
-        <ol>
-            <li>Oct. 2019 – Mar. 2020, <strong>Tutor</strong> for international students, NAIST, Japan.</li>
-            <li>Apr. 2020 – Sep. 2020, <strong>Tutor</strong> for international students, NAIST, Japan.</li>
-            <li>Oct. 2020 – Mar. 2021, <strong>Tutor</strong> for international students, NAIST, Japan.</li>
-        </ol>
-    </div>
+  </div>
 </section>
 
 
-<section id="sec4">
-    <div class="container">
-        <h2>CV</h2>
-        <p>
-            &#128218; <span>2025-present</span>, Research Scientist in the Embodied AI Research Team, Artificial Intelligence Research Center, National Institute of Advanced Industrial Science and Technology in Odaiba, Tokyo.<br><br>
-            &#128218; <span>2024-2025</span>, Research Scientist in the Automation Research Team, Industrial CPS Research Center, National Institute of Advanced Industrial Science and Technology in Odaiba, Tokyo.<br><br>
-            &#128104;&#8205;&#127891; <span>2021-2024</span>, Ph.D. student, Division of Advanced Science and Technology, Nara Institute of Science and Technology (NAIST).<br>
-            &#128104;&#8205;&#127891; <span>2019-2021</span>, Master student, Division of Advanced Science and Technology, Nara Institute of Science and Technology (NAIST).<br>
-            &#128104;&#8205;&#127891; <span>2013-2019</span>, Bachelor student, Department of Mechanical and System Engineering, Faculty of Engineering, Okayama University.<br>
-            &#127894;&#65039; <span>2014-2015</span>, Military service, Republic of Korea.
-            <br><br>
-            <a href="static/pdf/Oh_s_CV.pdf" target="_blank" rel="noopener" class="btn btn-info btn-sm">Download CV (PDF)</a>
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Imitation learning (IL) enables robots to acquire autonomous skills from human demonstrations. Recent in-context IL (ICIL) methods leverage off-the-shelf large language models (LLMs) as instant policies that infer task context and generate executable trajectories from only a few demonstrations, without retraining model parameters. However, the reliability of LLM-based instant policies is limited by hallucinations, which produce outlier trajectories inconsistent with the demonstrations. This issue is further amplified in multimodal tasks, where multiple distinct yet equally valid strategies exist in human demonstrations. To address these challenges, we propose the Robust Instant Policy (RIP) framework, which improves reliability by robustly aggregating multiple trajectories sampled from an LLM. As a concrete instantiation, we introduce Student’s-t mixture model RIP (SMM-RIP), which captures trajectory multimodality via an SMM and extracts a robust representative trajectory using Student’s-t regression, effectively suppressing hallucinated outliers while preserving valid strategies. Experiments on 15 everyday manipulation tasks in both simulated and real-world environments show that SMM-RIP consistently outperforms state-of-the-art IL methods, particularly in low-data regimes. These results highlight the importance of robustness and flexible multimodal modeling for reliable LLM-based ICIL.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Overview image -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop content">
+      <!-- Paper video. -->
+      <!-- <h2 class="title is-3">Video Presentation</h2> -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="item">
+            <!-- Overview image -->
+            <img src="../static/img/rip/overview_v2.jpg" alt="MY ALT TEXT"/>
+            <p class="has-text-centered" style="margin-top: 1em; color: #888;">
+              Fig1. Overview of the SMM-RIP applied in a pick-hanger-rack task. Human demonstrations provide paired visual observations and corresponding gripper trajectories from which contextual text tokens are generated. An LLM-based instant policy utilizes the contextual data and new image keypoints to sample multiple candidate trajectories. Using a Student’s-t mixture model followed by Student’s-t regression, the SMM-RIP captures multimodal motion patterns in LLM-sampled trajectories while suppressing outlier behaviors, yielding a robust and reliable trajectory for task execution.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End overview image -->
+
+<!-- Paper key contributions -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <!--Change href to the real reference-->
+          <p>
+            This study makes the following key contributions:
+          </p>
+          <ul>
+            <li>We demonstrate that LLM-based instant policies are inherently prone to hallucinations and that the multimodality of human demonstrations further amplifies this issue.</li>
+            <li>We introduce the RIP framework, implemented as the SMM-RIP, which aggregates multiple LLM-sampled trajectories while flexibly capturing multimodality and maintaining robustness to hallucinations, thereby yielding reliable trajectories.</li>
+            <li>We empirically validate the SMM-RIP across a diverse set of everyday tasks, demonstrating its superior robustness and flexibility.</li>
+          </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper key contributions -->
+
+<!-- Evaluation -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-2 has-text-centered">Evaluation</h2>
+      <h3 class="subtitle is-4"><strong>Environments and Tasks</strong></h3>
+      <div class="content has-text-justified">
+      <p>
+        To evaluate the SMM-RIP, a set of 15 everyday manipulation tasks was defined across both simulated and real-world environments, as shown in fig 2. 
+        These tasks were designed to reflect a broad range of household-level manipulations while enabling controlled evaluation of multimodal demonstrations, where multiple distinct optimal trajectories can achieve the same goal. 
+        For simplicity, we focused on multimodal scenarios with up to two optimal trajectories per task, because this reflects the typical data limitation of few-shot demonstrations.
+      </div>
+      <div class="item">
+        <!-- Evaluation image -->
+        <!-- <iframe src="../static/pdf/rip/envs_v3.pdf" width="50%" height="200">
+        </iframe> -->
+        <img src="../static/img/rip/envs_v2.jpg" alt="MY ALT TEXT"/>
+        <p class="has-text-centered" style="margin-top: 1em; color: #888;">
+          Fig2. Environments and tasks. Human demonstrations were collected in both simulated and real-world environments using a leader–follower robot setup, where a human-operated leader robot was mirrored by a follower robot with a similar embodiment. 
+        Under these settings, the SMM-RIP and baseline imitation learning methods were evaluated on 15 everyday manipulation tasks to assess their robustness and flexibility. 
+        The figure illustrates the simulated (top) and real-world (bottom) setups, each including examples of unimodal (left) and multimodal (right) tasks.
         </p>
-        
-        <p>
-            <ol>
-                <li>Activity 1：<a href="https://sites.google.com/view/robotpaperchallenge">robotpaper.challenge</a>メンバー<br>
-                    - ICRA2024 速報: <a href="https://speakerdeck.com/rpc/icra2024-su-bao" target="_blank" el="noopener">https://speakerdeck.com/rpc/icra2024-su-bao</a><br>
-                </li>
-            </ol>
-        </p>
+      </div>
+      <!--Change references-->
+      <br>
+      <h3 class="subtitle is-4 "><strong>Comparison Methods</strong></h3>
+      <div class="content has-text-justified">
+        <ul>
+          <li>
+            <strong>Diffusion Policy (DP)[Chi et al.]</strong>: 
+            A state-of-the-art IL algorithm that learns robust visuomotor policies through diffusion-based action modeling, demonstrating strong learning efficiency and generalizability across diverse manipulation tasks.
+          </li>
+          <li>
+            <strong>Keypoint Action Tokens (KAT) [Di Palo et al.]</strong>: 
+            A state-of-the-art ICIL algorithm that leverages an LLM as an instant policy by representing visual observations and robot actions as discrete keypoint tokens, as described in Section&nbsp;Method:KAT.
+          </li>
+          <li>
+            <strong>KAT-DP[Di Palo et al.]</strong>: 
+            A hybrid approach combining KAT and DP. It adopts the keypoint-based observation–action space from KAT while maintaining the diffusion-based action generation of DP, achieving a performance comparable to that of KAT.
+          </li>
+          <li>
+            <strong>Gaussian Neural Network RIP (GNN-RIP)</strong>: 
+            An ablated variant of our proposed framework in which a standard Gaussian distribution replaces the Student’s t-distribution 
+            (i.e., <code>&#x1D4A9;(&#x005E;a<sub>t</sub> | &#x03BC;<sub>&#x03B8;</sub>(t), &#x03C3;<sub>&#x03B8;</sub><sup>2</sup>(t))</code>), thus removing the robustness property of the Student’s t formulation.
+          </li>
+          <li>
+            <strong>Student’s t Neural Network RIP (SNN-RIP)[Oh et al.]</strong>: 
+            Another ablated variant of the SMM-RIP that excludes the mixture modeling component. It performs robust trajectory regression using a single-mode Student’s t-distribution, corresponding to a recent study.
+          </li>
+        </ul>
+      </div>
+      <br>
+      <h3 class="subtitle is-3" style="color: #0081d1;"><b>Qualitative results: Simulation</b></h3>
+      <h4 class="subtitle is-5"><strong>Teleoperation System for Demonstration</strong></h4>
+      <div class="columns">
+        <div class="column is-one-third">
+          <div class="video-container" style="position:relative;padding-bottom:100%;height:0;overflow:hidden;">
+            <video controls style="position:absolute;top:0;left:0;width:100%;height:100%;">
+              <source src="../static/video/rip/simulation/sim_demo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="column is-two-thirds">
+          <br>
+          <img src="../static/img/rip/sim_tasks.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+        </div>
+      </div>
+      <!----------------------------------------------------------------->
+      <br>
+      <h4 class="subtitle is-5"><strong>Simulation Unimodal Task: Pick Banana</strong></h4>
+      <div class="columns is-centered">
+        <!-- First and second columns: Image spanning two columns -->
+        <!-- First column: Image spanning two-thirds of the row -->
+        <div class="column is-two-thirds">
+          <p class="has-text-centered" style="color: #888;"><strong>Success condition: </strong> at the end of the episode, the banana is picked up</p>
+          <br>
+          <div  class="columns is-gapless">
+            <div class="column">
+              <img src="../static/img/rip/simulation/pick_banana_seed=15_num_demos=10_num_queries=10_SNN_2d_graph_gray_5.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+            </div>
+            <div class="column">
+              <img src="../static/img/rip/simulation/pick_banana_seed=15_num_demos=10_num_queries=10_SMM_2d_graph_tomato_5.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+            </div>
+          </div>
+        </div>
+        <!-- Second column: 2x2 videos in one-third of the row -->
+        <div class="column is-one-third">
+          <div class="columns is-multiline">
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">KAT</span> <span style="color: #d32f2f;"><b>Failure</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/pick_banana/KAT.gif" alt="Video 1" style="width: 100%; background: #222;">
+            </div>
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">GNN-RIP</span> <span style="color: #d32f2f;"><b>Failure</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/pick_banana/GNN.gif" alt="Video 2" style="width: 100%; background: #222;">
+              
+            </div>
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">SNN-RIP</span> <span style="color: #0f1a81;"><b>Success</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/pick_banana/SNN.gif" alt="Video 3" style="width: 100%; background: #222;">
+            </div>
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">SMM-RIP</span> <span style="color: #0f1a81;"><b>Success</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/pick_banana/SMM.gif" alt="Video 4" style="width: 100%; background: #222;">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <h4 class="subtitle is-5"><strong>Simulation Unimodal Task: Push Cube</strong></h4>
+      <div class="columns is-centered">
+        <!-- First and second columns: Image spanning two columns -->
+        <!-- First column: Image spanning two-thirds of the row -->
+        <div class="column is-two-thirds">
+          <p class="has-text-centered" style="color: #888;"><strong>Success condition: </strong> at the end of the episode, the cube should be pushed out to the goal circle</p>
+          <br>
+          <div  class="columns is-gapless">
+            <div class="column">
+              <img src="../static/img/rip/simulation/push_cube_seed=39_num_demos=3_num_queries=10_SNN_2d_graph_gray_5.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+            </div>
+            <div class="column">
+              <img src="../static/img/rip/simulation/push_cube_seed=39_num_demos=3_num_queries=10_SMM_2d_graph_tomato_5.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+            </div>
+          </div>
+        </div>
+        <!-- Second column: 2x2 videos in one-third of the row -->
+        <div class="column is-one-third">
+          <div class="columns is-multiline">
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">KAT</span> <span style="color: #d32f2f;"><b>Failure</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/push_cube/KAT.gif" alt="Video 1" style="width: 100%; background: #222;">
+            </div>
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">GNN-RIP</span> <span style="color: #d32f2f;"><b>Failure</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/push_cube/GNN.gif" alt="Video 2" style="width: 100%; background: #222;">
+            </div>
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">SNN-RIP</span> <span style="color: #0f1a81;"><b>Success</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/push_cube/SNN.gif" alt="Video 3" style="width: 100%; background: #222;">
+            </div>
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">SMM-RIP</span> <span style="color: #0f1a81;"><b>Success</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/push_cube/SMM.gif" alt="Video 4" style="width: 100%; background: #222;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <h4 class="subtitle is-5"><strong>Simulation Unimodal Task: Open Drawer</strong></h4>
+      <div class="columns is-centered">
+        <!-- First and second columns: Image spanning two columns -->
+        <!-- First column: Image spanning two-thirds of the row -->
+        <div class="column is-two-thirds">
+          <p class="has-text-centered" style="color: #888;"><strong>Success condition: </strong>  at the end of the episode, the drawer is opened</p>
+          <br>
+          <div  class="columns is-gapless">
+            <div class="column">
+              <img src="../static/img/rip/simulation/drawer_cabinet_seed=32_num_demos=10_num_queries=10_SNN_2d_graph_gray_5.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+            </div>
+            <div class="column">
+              <img src="../static/img/rip/simulation/drawer_cabinet_seed=32_num_demos=10_num_queries=10_SMM_2d_graph_tomato_5.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+            </div>
+          </div>
+        </div>
+        <!-- Second column: 2x2 videos in one-third of the row -->
+        <div class="column is-one-third">
+          <div class="columns is-multiline">
+            <div class="column is-half">
+               <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">KAT</span> <span style="color: #d32f2f;"><b>Failure</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/open_drawer/KAT.gif" alt="Video 1" style="width: 100%; background: #222;">
+            </div>
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">GNN-RIP</span> <span style="color: #d32f2f;"><b>Failure</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/open_drawer/GNN.gif" alt="Video 2" style="width: 100%; background: #222;">
+              
+            </div>
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">SNN-RIP</span> <span style="color: #0f1a81;"><b>Success</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/open_drawer/SNN.gif" alt="Video 3" style="width: 100%; background: #222;">
+            </div>
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">SMM-RIP</span> <span style="color: #0f1a81;"><b>Success</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/open_drawer/SMM.gif" alt="Video 4" style="width: 100%; background: #222;">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <h4 class="subtitle is-5"><strong>Simulation Unimodal Task: Close Cabinet</strong></h4>
+      <div class="columns is-centered">
+        <!-- First and second columns: Image spanning two columns -->
+        <!-- First column: Image spanning two-thirds of the row -->
+        <div class="column is-two-thirds">
+          <p class="has-text-centered" style="color: #888;"><strong>Success condition: </strong>  at the end of the episode, the cabinet is closed completely</p>
+          <br>
+          <div  class="columns is-gapless">
+            <div class="column">
+              <img src="../static/img/rip/simulation/close_cabinet_door_seed=38_num_demos=5_num_queries=10_SNN_2d_graph_gray_5.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+            </div>
+            <div class="column">
+              <img src="../static/img/rip/simulation/close_cabinet_door_seed=38_num_demos=5_num_queries=10_SMM_2d_graph_tomato_5.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+            </div>
+          </div> 
+        </div>
+        <!-- Second column: 2x2 videos in one-third of the row -->
+        <div class="column is-one-third">
+          <div class="columns is-multiline">
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">KAT</span> <span style="color: #d32f2f;"><b>Failure</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/close_cabinet/KAT.gif" alt="Video 1" style="width: 100%; background: #222;">
+            </div>
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">GNN-RIP</span> <span style="color: #d32f2f;"><b>Failure</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/close_cabinet/GNN.gif" alt="Video 2" style="width: 100%; background: #222;">
+              
+            </div>
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">SNN-RIP</span> <span style="color: #0f1a81;"><b>Success</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/close_cabinet/SNN.gif" alt="Video 3" style="width: 100%; background: #222;">
+            </div>
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">SMM-RIP</span> <span style="color: #0f1a81;"><b>Success</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/close_cabinet/SMM.gif" alt="Video 4" style="width: 100%; background: #222;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <h4 class="subtitle is-5"><strong>Simulation Unimodal Task: Turn Faucet</strong></h4>
+      <div class="columns is-centered">
+        <!-- First and second columns: Image spanning two columns -->
+        <!-- First column: Image spanning two-thirds of the row -->
+        <div class="column is-two-thirds">
+          <p class="has-text-centered" style="color: #888;"><strong>Success condition: </strong> at the end of the episode, the faucet is rotated</p>
+          <br>
+            <!-- 
+              The "gap" parameter in the inline style of the <div> element sets the spacing between child elements within the flex or grid container.
+              In this case, 'gap: -0.5rem;' attempts to set a negative gap of -0.5rem, which is not standard and may not be supported in all browsers.
+              Normally, "gap" should be a positive value to create space between columns or rows.
+              Negative values may lead to unexpected layout behavior or be ignored by the browser.
+            -->
+            <div class="columns is-gapless">
+              <div class="column">
+                <img src="../static/img/rip/simulation/turn_faucet_seed=18_num_demos=10_num_queries=10_SNN_2d_graph_gray_5.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+              </div>
+              <div class="column">
+                <img src="../static/img/rip/simulation/turn_faucet_seed=18_num_demos=10_num_queries=10_SMM_2d_graph_tomato_5.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+              </div>
+            </div>
+        </div>
+        <!-- Second column: 2x2 videos in one-third of the row -->
+        <div class="column is-one-third">
+          <div class="columns is-multiline">
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">KAT</span> <span style="color: #d32f2f;"><b>Failure</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/turn_faucet/KAT.gif" alt="Video 1" style="width: 100%; background: #222;">
+            </div>
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">GNN-RIP</span> <span style="color: #d32f2f;"><b>Failure</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/turn_faucet/GNN.gif" alt="Video 2" style="width: 100%; background: #222;">
+            </div>
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">SNN-RIP</span> <span style="color: #0f1a81;"><b>Success</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/turn_faucet/SNN.gif" alt="Video 3" style="width: 100%; background: #222;">
+            </div>
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">SMM-RIP</span> <span style="color: #0f1a81;"><b>Success</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/turn_faucet/SMM.gif" alt="Video 4" style="width: 100%; background: #222;">
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <h4 class="subtitle is-5"><strong>Simulation Multimodal Task: Draw Triangle</strong></h4>
+      <div class="columns is-centered">
+        <!-- First and second columns: Image spanning two columns -->
+        <!-- First column: Image spanning two-thirds of the row -->
+        <div class="column is-two-thirds">
+          <p class="has-text-centered" style="color: #888;"><strong>Success condition: </strong> at the end of the episode, the triangle should be accurately drawn</p>
+          <br>
+          <div  class="columns is-gapless">
+            <div class="column">
+              <img src="../static/img/rip/simulation/draw_triangle_seed=14_num_demos=20_num_queries=10_SNN_2d_graph_gray_5.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+            </div>
+            <div class="column">
+              <img src="../static/img/rip/simulation/draw_triangle_seed=14_num_demos=20_num_queries=10_SMM_2d_graph_tomato_5.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+            </div>
+          </div>
+        </div>
+        <!-- Second column: 2x2 videos in one-third of the row -->
+        <div class="column is-one-third">
+          <div class="columns is-multiline">
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">KAT</span> <span style="color: #d32f2f;"><b>Failure</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/drawing/KAT.gif" alt="Video 1" style="width: 100%; background: #222;">
+            </div>
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">GNN-RIP</span> <span style="color: #d32f2f;"><b>Failure</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/drawing/GNN.gif" alt="Video 2" style="width: 100%; background: #222;">
+              
+            </div>
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">SNN-RIP</span> <span style="color: #d32f2f;"><b>Failure</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/drawing/SNN.gif" alt="Video 3" style="width: 100%; background: #222;">
+            </div>
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">SMM-RIP</span> <span style="color: #0f1a81;"><b>Success</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/drawing/SMM.gif" alt="Video 4" style="width: 100%; background: #222;">
+            </div>
+          </div>
+        </div>
+      </div>
+    <!----------------------------------------------------------------->
+    <br>
+      <h4 class="subtitle is-5"><strong>Simulation Multimodal Task: Push Pull Cube</strong></h4>
+      <div class="columns is-centered">
+        <!-- First and second columns: Image spanning two columns -->
+        <!-- First column: Image spanning two-thirds of the row -->
+        <div class="column is-two-thirds">
+          <p class="has-text-centered" style="color: #888;"><strong>Success condition: </strong> at the end of the episode, the cube should be outside of the goal area</p>
+          <br>
+          <div class="columns is-gapless">
+            <div class="column">
+              <img src="../static/img/rip/simulation/push_pull_cube_seed=40_num_demos=15_num_queries=10_SNN_2d_graph_gray_5.png" alt="MY ALT TEXT" style="width: 120%; height: auto;"/>
+            </div>
+            <div class="column">
+              <img src="../static/img/rip/simulation/push_pull_cube_seed=40_num_demos=15_num_queries=10_SMM_2d_graph_tomato_5.png" alt="MY ALT TEXT" style="width: 120%; height: auto;"/>
+            </div>
+          </div>
+        </div>
+        <!-- Second column: 2x2 videos in one-third of the row -->
+        <div class="column is-one-third">
+          <div class="columns is-multiline">
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">KAT</span> <span style="color: #d32f2f;"><b>Failure</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/push_pull_cube/KAT.gif" alt="Video 1" style="width: 100%; background: #222;">
+            </div>
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">GNN-RIP</span> <span style="color: #d32f2f;"><b>Failure</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/push_pull_cube/GNN.gif" alt="Video 2" style="width: 100%; background: #222;">
+              
+            </div>
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">SNN-RIP</span> <span style="color: #d32f2f;"><b>Failure</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/push_pull_cube/SNN.gif" alt="Video 3" style="width: 100%; background: #222;">
+            </div>
+            <div class="column is-half">
+              <p class="has-text-centered" style="color: #888;">
+                <span style="color: #000;">SMM-RIP</span> <span style="color: #0f1a81;"><b>Success</b></span>
+              </p>
+              <img src="../static/video/rip/simulation/push_pull_cube/SMM.gif" alt="Video 4" style="width: 100%; background: #222;">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!----------------------------------------------------------------->
+      <!--- Real world evaluation --->
+      <h3 class="subtitle is-3" style="color: #0081d1;"><b>Qualitative results: Real-world</b></h3>
+      <br>
+      <h4 class="subtitle is-5"><strong>Teleoperation System for Demonstration</strong></h4>
+      <div class="columns ">
+        <div class="column is-one-third">
+          <div class="video-container" style="position:relative;padding-bottom:100%;height:0;overflow:hidden;">
+            <video controls style="position:absolute;top:0;left:0;width:100%;height:100%;">
+              <source src="../static/video/rip/real_world/Demo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="column is-two-thirds">
+          <br>
+          <img src="../static/img/rip/real_tasks.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+        </div>
+      </div>
+      <h4 class="subtitle is-5"><strong>Real Unimodal Task: Pick Banana</strong></h4>
+      <p><strong>Success condition:</strong> at the end of the episode, the banana is picked up</p>
+      <div class="columns is-centered">
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">KAT </span><span style="color: #d32f2f;"><b>Failure</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/pick_banana/KAT.gif" alt="KAT" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">GNN-RIP </span><span style="color: #d32f2f;"><b>Failure</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/pick_banana/GNN.gif" alt="GNN-RIP" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SNN-RIP </span><span style="color: #0f1a81;"><b>Success</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/pick_banana/SNN.gif" alt="SNN-RIP" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SMM-RIP </span><span style="color: #0f1a81;"><b>Success</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/pick_banana/SMM.gif" alt="SMM-RIP" style="width: 100%; background: #222;">
+        </div>
+      </div>
+      <h4 class="subtitle is-5"><strong>Real Unimodal Task: Hanger</strong></h4>
+      <p><strong>Success condition:</strong> at the end of the episode, the hanger is hung on the stand</p>
+      <div class="columns is-centered">
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">KAT </span><span style="color: #d32f2f;"><b>Failure</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/hanger/KAT.gif" alt="KAT" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">GNN-RIP </span><span style="color: #d32f2f;"><b>Failure</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/hanger/GNN.gif" alt="GNN-RIP" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SNN-RIP </span><span style="color: #0f1a81;"><b>Success</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/hanger/SNN.gif" alt="SNN-RIP" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SMM-RIP </span><span style="color: #0f1a81;"><b>Success</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/hanger/SMM.gif" alt="SMM-RIP" style="width: 100%; background: #222;">
+        </div>
+      </div>
+      <h4 class="subtitle is-5"><strong>Real Unimodal Task: Cup Upright</strong></h4>
+      <p><strong>Success condition:</strong> at the end of the episode, the cup is vertically placed on the table</p>
+      <div class="columns is-centered">
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">KAT </span><span style="color: #d32f2f;"><b>Failure</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/cup_upright/KAT.gif" alt="KAT" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">GNN-RIP </span><span style="color: #d32f2f;"><b>Failure</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/cup_upright/GNN.gif" alt="GNN-RIP" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SNN-RIP </span><span style="color: #0f1a81;"><b>Success</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/cup_upright/SNN.gif" alt="SNN-RIP" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SMM-RIP </span><span style="color: #0f1a81;"><b>Success</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/cup_upright/SMM.gif" alt="SMM-RIP" style="width: 100%; background: #222;">
+        </div>
+      </div>
+      <h4 class="subtitle is-5"><strong>Real Unimodal Task: Sweep</strong></h4>
+      <p><strong>Success condition:</strong> at the end of the episode, the dust (cubes) is on the dust pan</p>
+      <div class="columns is-centered">
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">KAT </span><span style="color: #d32f2f;"><b>Failure</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/sweep/KAT.gif" alt="KAT" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">GNN-RIP </span><span style="color: #d32f2f;"><b>Failure</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/sweep/GNN.gif" alt="GNN-RIP" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SNN-RIP </span><span style="color: #0f1a81;"><b>Success</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/sweep/SNN.gif" alt="SNN-RIP" style="width: 100%; background: #222;">
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SMM-RIP </span><span style="color: #0f1a81;"><b>Success</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/sweep/SMM.gif" alt="SMM-RIP" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SMM-RIP </span><span style="color: #0f1a81;"><b>Success</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/sweep/SMM_2.gif" alt="SMM-RIP" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SMM-RIP </span><span style="color: #0f1a81;"><b>Success</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/sweep/SMM_3.gif" alt="SMM-RIP" style="width: 100%; background: #222;">
+        </div>
+      </div>
+      <h4 class="subtitle is-5"><strong>Real Unimodal Task: Pick and Place</strong></h4>
+      <p><strong>Success condition:</strong> at the end of the episode, the bottle is in the bowl</p>
+      <div class="columns is-centered">
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">KAT </span><span style="color: #d32f2f;"><b>Failure</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/pick_and_place/KAT.gif" alt="KAT" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">GNN-RIP </span><span style="color: #d32f2f;"><b>Failure</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/pick_and_place/GNN.gif" alt="GNN-RIP" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SNN-RIP </span><span style="color: #0f1a81;"><b>Success</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/pick_and_place/SNN.gif" alt="SNN-RIP" style="width: 100%; background: #222;">
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SMM-RIP </span><span style="color: #0f1a81;"><b>Success</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/pick_and_place/SMM.gif" alt="SMM-RIP" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SMM-RIP </span><span style="color: #0f1a81;"><b>Success</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/pick_and_place/SMM_2.gif" alt="SMM-RIP" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SMM-RIP </span><span style="color: #0f1a81;"><b>Success</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/pick_and_place/SMM_3.gif" alt="SMM-RIP" style="width: 100%; background: #222;">
+        </div>
+      </div>
+      <h4 class="subtitle is-5"><strong>Real Multimodal Task: Wipe Plate</strong></h4>
+      <p><strong>Success condition:</strong> At the end of the episode, the sponge should have wiped along the entire contour of the plate, maintaining contact throughout, without significantly moving the plate</p>
+      <div class="columns is-centered">
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">KAT </span><span style="color: #d32f2f;"><b>Failure</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/wipe_plate/KAT.gif" alt="KAT" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">GNN-RIP </span><span style="color: #d32f2f;"><b>Failure</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/wipe_plate/GNN.gif" alt="GNN-RIP" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SNN-RIP </span><span style="color: #d32f2f;"><b>Failure</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/wipe_plate/SNN.gif" alt="SNN-RIP" style="width: 100%; background: #222;">
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SMM-RIP </span><span style="color: #0f1a81;"><b>Success</b></span>
+          </p>
+          <div style="text-align: center;">
+            <img src="../static/video/rip/real_world/wipe_plate/SMM.gif" alt="SMM-RIP" style="width: 66%; background: #222;">
+          </div>
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SMM-RIP </span><span style="color: #0f1a81;"><b>Success</b></span>
+          </p>
+          <div style="text-align: center;">
+            <img src="../static/video/rip/real_world/wipe_plate/SMM_2.gif" alt="SMM-RIP" style="width: 66%; background: #222;">
+          </div>
+        </div>
+      </div>
+      <h4 class="subtitle is-5"><strong>Real Multimodal Task: Pick Hanger</strong></h4>
+      <p><strong>Success condition:</strong> At the end of the episode, the hanger should be pick up by any side</p>
+      <div class="columns is-centered">
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">KAT </span><span style="color: #d32f2f;"><b>Failure</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/pick_hanger/KAT.gif" alt="KAT" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">GNN-RIP </span><span style="color: #d32f2f;"><b>Failure</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/pick_hanger/GNN.gif" alt="GNN-RIP" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SNN-RIP </span><span style="color: #d32f2f;"><b>Failure</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/pick_hanger/SNN.gif" alt="SNN-RIP" style="width: 100%; background: #222;">
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SMM-RIP </span><span style="color: #0f1a81;"><b>Success</b></span>
+          </p>
+          <div style="text-align: center;">
+            <img src="../static/video/rip/real_world/pick_hanger/SMM.gif" alt="SMM-RIP" style="width: 66%; background: #222;">
+          </div>
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SMM-RIP </span><span style="color: #0f1a81;"><b>Success</b></span>
+          </p>
+          <div style="text-align: center;">
+            <img src="../static/video/rip/real_world/pick_hanger/SMM_2.gif" alt="SMM-RIP" style="width: 66%; background: #222;">
+          </div>
+        </div>
+      </div>
+      <h4 class="subtitle is-5"><strong>Real Multimodal Task: Place Cube</strong></h4>
+      <p><strong>Success condition:</strong> At the end of the episode, the cube should be placed in any cup</p>
+      <div class="columns is-centered">
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">KAT </span><span style="color: #d32f2f;"><b>Failure</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/place_cube/KAT.gif" alt="KAT" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">GNN-RIP </span><span style="color: #d32f2f;"><b>Failure</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/place_cube/GNN.gif" alt="GNN-RIP" style="width: 100%; background: #222;">
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SNN-RIP </span><span style="color: #d32f2f;"><b>Failure</b></span>
+          </p>
+          <img src="../static/video/rip/real_world/place_cube/SNN.gif" alt="SNN-RIP" style="width: 100%; background: #222;">
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SMM-RIP </span><span style="color: #0f1a81;"><b>Success</b></span>
+          </p>
+          <div style="text-align: center;">
+          <img src="../static/video/rip/real_world/place_cube/SMM.gif" alt="SMM-RIP" style="width: 66%; background: #222;">
+          </div>
+        </div>
+        <div class="column">
+          <p class="has-text-centered" style="color: #888;">
+            <span style="color: #000;">SMM-RIP </span><span style="color: #0f1a81;"><b>Success</b></span>
+          </p>
+          <div style="text-align: center;">
+            <img src="../static/video/rip/real_world/place_cube/SMM_2.gif" alt="SMM-RIP" style="width: 66%; background: #222;">
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
+<!-- End Evaluation section -->
+
+<!-- Quantitative Results -->
+<section class="section" id="Results">
+  <div class="container is-max-desktop content">
+    <h2 class="subtitle is-3" style="color: #0081d1;"><b>Quantitative Results</b></h2>
+    <h3 class="subtitle is-5"><b>How does the SMM-RIP compare with state-of-the-art IL and instant policy methods in terms of flexibility for multimodal tasks and robustness against LLM-induced hallucinations?</b></h3>
+    <div class="content has-text-justified">
+      <p>The results of the quantitative analysis comparing the policy success rates of each method are presented as below:</p>
+      <div>
+        <img src="../static/img/rip/result_quanti_demo10.png"
+            alt="Quantitative Results (Result 1)"
+            style="max-width:100%; border:1px solid #ccc;" />
+
+        <p>
+          <strong>Result 1.</strong>
+          Comparison of SMM-RIP with baseline methods using
+            10 demonstrations per task.
+          <br>
+
+          <b>(a)</b> <i>Top:</i> Simulation &nbsp;|&nbsp; <i>Bottom:</i> Real world.
+          Success rates are measured over
+            50 executions (simulation) and
+            10 executions (real world).
+            Missing bars indicate zero success.
+          <br>
+
+          <b>(b)</b> Average success rates on
+          <i>unimodal</i>, <i>multimodal</i>, and <i>all</i> tasks
+          (simulation + real world).
+          Shaded regions show mean ± standard deviation.<br>
+
+          <u>
+            Methods marked with
+            <span style="color:#d32f2f;">*</span>
+            perform significantly worse than SMM-RIP
+            (t-test, <i>p</i> &lt; 5&times;10<sup>&minus;2</sup>).
+          </u>
+        </p>
+      </div>
+
+      <p>
+        <strong>Takeaway.</strong>
+        SMM-RIP consistently achieves the highest success rates by
+        <em>robustly aggregating multiple LLM-generated trajectories and explicitly
+        handling multimodal solutions</em>.
+        This enables reliable few-shot robot execution without retraining,
+        even in the presence of LLM hallucinations.
+      </p>
+
+
+      <br>
+      <div>
+        <img src="../static/img/rip/result_total_demos_subplot.jpg"
+            alt="Quantitative Results (Result 2)"
+            style="max-width:100%; border:1px solid #ccc;" />
+
+        <p>
+          <strong>Result 2.</strong>
+          Success rates as a function of the number of demonstrations
+          (<i>3, 5, 10, 15, 20</i>) in simulation experiments.<br>
+
+            All curves report the mean success rate (solid line)
+            with standard deviation (shaded region),
+            measured over 50 executions per task.
+          <br>
+        </p>
+      </div>
+
+      <p>
+        <strong>Takeaway.</strong>
+        SMM-RIP consistently achieves the highest success rates across all data regimes,
+        with the largest gains in the <em>low-data setting</em> (3–5 demonstrations).
+        While unimodal aggregation degrades on multimodal tasks,
+        SMM-RIP remains robust by explicitly modeling multiple valid strategies,
+        highlighting the importance of multimodal, outlier-robust aggregation when demonstrations are scarce.
+      </p>
+
+    </div>
+  </div>
 </section>
 
-<!--</main>-->
-
-
-<!-- javascript はここから -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/script.js"></script>
-<script>
-// アイコンの回転アニメーション（Bootstrap 3/4対応）
-$(document).ready(function() {
-    $('#domesticConferences').on('show.bs.collapse', function() {
-        $('#domesticIcon').css('transform', 'rotate(90deg)');
-    });
-    
-    $('#domesticConferences').on('hide.bs.collapse', function() {
-        $('#domesticIcon').css('transform', 'rotate(0deg)');
-    });
-    
-    // Bootstrap 3の場合のフォールバック
-    $('#domesticConferences').on('shown.bs.collapse', function() {
-        $('#domesticIcon').css('transform', 'rotate(90deg)');
-    });
-    
-    $('#domesticConferences').on('hidden.bs.collapse', function() {
-        $('#domesticIcon').css('transform', 'rotate(0deg)');
-    });
-});
-</script>
-</body>
-</html>
-            <p class="text-center mb-0 pt-3 pb-3">&copy; OH Homepage All Rights Reserved.</p>
+<section class="section" id="Results">
+  <div class="container is-max-desktop content">
+    <h3 class="subtitle is-5"><b>Which RIP configurations yield the best performance?</b></h3>
+      <div class="content has-text-justified">
+        <p>
+          To evaluate the contribution of each design component in the SMM-RIP, a quantitative analysis was conducted on four factors: the number of queries (<i>Q</i>), degrees of freedom (&nu;), number of mixture components (<i>M</i>), and the effect of applying SNN-RIP regression after SMM.
+        </p>
+      </div>
+      <div class="content">
+        <div class="columns is-multiline is-centered">
+          <!-- Row 1: nu plots -->
+          <div class="column is-one-third has-text-centered">
+            <strong style="font-size:big;">Unimodal Tasks</strong><br>
+            <img src="../static/img/rip/result_uni_nu_plot.jpg" alt="Unimodal Tasks nu plot" style="width:100%; max-width:300px;">
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <strong style="font-size:big;">Multimodal Tasks</strong><br>
+            <img src="../static/img/rip/result_mult_nu_plot.jpg" alt="Multimodal Tasks nu plot" style="width:100%; max-width:300px;">
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <strong style="font-size:big;">All Tasks</strong><br>
+            <img src="../static/img/rip/result_total_nu_plot.jpg" alt="All Tasks nu plot" style="width:100%; max-width:300px;">
+          </div>
+          <!-- Row 2: q plots -->
+          <div class="column is-one-third has-text-centered">
+            <img src="../static/img/rip/result_uni_q_plot.jpg" alt="Unimodal Tasks q plot" style="width:100%; max-width:300px;">
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <img src="../static/img/rip/result_mult_q_plot.jpg" alt="Multimodal Tasks q plot" style="width:100%; max-width:300px;">
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <img src="../static/img/rip/result_total_q_plot.jpg" alt="All Tasks q plot" style="width:100%; max-width:300px;">
+          </div>
+          <!-- Row 3: m plots -->
+          <div class="column is-one-third has-text-centered">
+            <img src="../static/img/rip/result_uni_m_plot.jpg" alt="Unimodal Tasks m plot" style="width:100%; max-width:300px;">
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <img src="../static/img/rip/result_mult_m_plot.jpg" alt="Multimodal Tasks m plot" style="width:100%; max-width:300px;">
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <img src="../static/img/rip/result_total_m_plot.jpg" alt="All Tasks m plot" style="width:100%; max-width:300px;">
+          </div>
         </div>
+      </div>
+
+      <div class="content has-text-justified">
+        <p>
+        <strong>Result 3.</strong>
+        Design analysis of RIP variants highlighting three key factors:
+        the Student’s-<i>t</i> degrees of freedom (&nu;),
+        the number of trajectory queries (<i>Q</i>),
+        and the number of mixture components (<i>M</i>).<br>
+
+        <b>Top → Bottom:</b>
+        Success rates under different configurations of
+        &nu; = {0.1, 0.5, 1.0, 1.5, 3.0, &infin;},
+        Q = {3, 5, 10},
+        and M = {1, 3, 5}.<br>
+
+        Results report the mean success rate with
+        standard deviation,
+        evaluated over 50 simulation runs per task
+        using 20 demonstrations.
+      </p>
+
+      <p>
+        <strong>Takeaway.</strong>
+        The analysis shows that heavy-tailed modeling (&nu; &lt; &infin;)
+        and sufficient trajectory sampling (<i>Q</i> ≥ 5)
+        are critical for suppressing hallucinated outliers,
+        while multiple mixture components (<i>M</i> &gt; 1)
+        are necessary to capture distinct valid strategies.
+        Together, these results justify the design choices of SMM-RIP.
+      </p>
+      </div>
+  </div>
+</section>
+<!-- End RIP Design Analysis -->
+
+
+<!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
     </div>
+</section> -->
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 
-<!-- javascript はここから -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/script.js"></script>
-<script>
-// アイコンの回転アニメーション（Bootstrap 3/4対応）
-$(document).ready(function() {
-    $('#domesticConferences').on('show.bs.collapse', function() {
-        $('#domesticIcon').css('transform', 'rotate(90deg)');
-    });
-    
-    $('#domesticConferences').on('hide.bs.collapse', function() {
-        $('#domesticIcon').css('transform', 'rotate(0deg)');
-    });
-    
-    // Bootstrap 3の場合のフォールバック
-    $('#domesticConferences').on('shown.bs.collapse', function() {
-        $('#domesticIcon').css('transform', 'rotate(90deg)');
-    });
-    
-    $('#domesticConferences').on('hidden.bs.collapse', function() {
-        $('#domesticIcon').css('transform', 'rotate(0deg)');
-    });
-});
-</script>
-</body>
-</html>
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
